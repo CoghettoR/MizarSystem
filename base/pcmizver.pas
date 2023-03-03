@@ -13,7 +13,7 @@ const
    PCMizarVersionNbr = 1;
    PCMizarVariantNbr = 12;
 
-   CurrentYear = 2022;
+   CurrentYear = 2023;
 
 {$IFDEF WIN32}
    DirSeparator = '\';
@@ -79,7 +79,7 @@ end;
 
 function  PCMizarVersionStr: string;
 begin
- PCMizarVersionStr:='Mizar Ver. '+VersionStr;
+ PCMizarVersionStr:='Mizar Ver. '+VersionStr+'/rpi';
 end;
 
 end.
