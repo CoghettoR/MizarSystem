@@ -251,6 +251,7 @@ $ cd ..
 # POUR RECONSTRUIRE toute la MML:
 $ mkdir mml
 $ cd mml
+$ cp ../Makefile .
 $ cp ../../usr/local/share/mizar/mml/* .
 $ make
 
