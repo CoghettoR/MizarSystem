@@ -247,6 +247,9 @@ Analyzer   0:00
 Checker  [   1]
 Time of mizaring: 0:00
 
+$ cd ..
+# POUR RECONSTRUIRE toute la MML:
+$ make
 
 
 
