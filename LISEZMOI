@@ -27,7 +27,7 @@ $ uname -a
 Linux raspberrypi 5.15.84-v7+ #1613 SMP Thu Jan 5 11:59:48 GMT 2023 armv7l GNU/L
 inux
 
-sudo apt install fpc
+$ sudo apt install fpc
 [...]
 
 $ fpc
