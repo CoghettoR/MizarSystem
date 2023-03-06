@@ -38,7 +38,7 @@ Copyright (c) 1993-2020 by Florian Klaempfl and others
 
 $ mkdir mizar2
 $ cd mizar2
-$ git clone git clone https://github.com/CoghettoR/MizarSystem.git
+$ git clone https://github.com/CoghettoR/MizarSystem.git
 $ cd MizarSystem
 $ time sh compile_rpi.sh
 [...]
