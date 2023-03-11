@@ -213,8 +213,8 @@ $ du
 362284	./local/share
 423424	./local
 423428	.
-$ export MIZFILES=/home/roland/mizar2/usr/local/share/mizar
-$ export PATH="/home/roland/mizar2/usr/local/bin":$PATH
+$ export MIZFILES=$HOME/mizar2/usr/local/share/mizar
+$ export PATH="$HOME/mizar2/usr/local/bin":$PATH
 
 $ cd ../MizarSystem
 $ cp ./bin/* ../usr/local/bin
@@ -250,7 +250,7 @@ $ cd ..
 # POUR RECONSTRUIRE toute la MML:
 $ mkdir mml
 $ cd mml
-$ cp ../Makefile .
+$ cp ../MizarSystem/Makefile .
 $ cp ../../usr/local/share/mizar/mml/* .
 $ make
 
