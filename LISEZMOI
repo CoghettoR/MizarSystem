@@ -251,7 +251,7 @@ $ cd ..
 $ mkdir mml
 $ cd mml
 $ cp ../MizarSystem/Makefile .
-$ cp ../../usr/local/share/mizar/mml/* .
+$ cp ../usr/local/share/mizar/mml/* .
 $ make
 
 
