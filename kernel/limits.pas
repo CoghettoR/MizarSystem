@@ -199,7 +199,7 @@ const
        Uzywana przez PARSER
      }
 
-  MaxTheoNbr      =  2000;
+MaxTheoNbr      =  20000; 
      { Maksymalna ilosc twierdzen na jednym pliku. Powinna byc mniejsza
        od maksymalnej mocy zbioru.
        Przekroczenie powoduje odrzucenie uzasadnienia.

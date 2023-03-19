@@ -12,7 +12,7 @@ uses numbers;
 const
 
 { Maximum MCollection size }
-  MaxSize = 2000000;
+  MaxSize = 20000000;
 
   MaxCollectionSize = MaxSize div SizeOf(Pointer);
 

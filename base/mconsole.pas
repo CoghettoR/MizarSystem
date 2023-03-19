@@ -257,7 +257,7 @@ end;
 procedure Noise;
 begin
  {$IFNDEF WIN32}
- write(^G^G^G);
+  write(^G^G^G); 
  {$ENDIF}
 end;
 

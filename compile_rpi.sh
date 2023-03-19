@@ -27,7 +27,7 @@ fpc   -Mdelphi   -FE../bin -oprune prune.dpr
 fpc   -Mdelphi   -FE../bin -oremflags remflags.dpr
 cd ../libtools
 fpc   -Mdelphi   -Fu../kernel -Fu../base -FE../bin -ocheckvoc checkvoc.dpr
-fpc   -Mdelphi   -Fu../kernel -Fu../base -FE../bin -ochkprem chkprem.dpr
+fpc   -Mdelphi   -Fu../kernel -Fu../base -FE../bin -ochkrprem chkrprem.dpr
 fpc   -Mdelphi  -Fu../kernel -Fu../base -FE../bin -ocreatevd createvd.dpr
 fpc   -Mdelphi  -Fu../kernel -Fu../base -FE../bin -odellink dellink.dpr
 fpc   -Mdelphi  -Fu../kernel -Fu../base -FE../bin -oenvget envget.dpr
