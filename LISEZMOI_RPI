@@ -1,0 +1,274 @@
+MizarSystem, a experimental fork. R. Coghetto
+
+for Initial repertory: https://github.com/MizarProject/system (GPL-3.0 License): "This repository contains the source code of the Mizar system. Mizar is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Binary distribution for major platforms can be downloaded from the main Mizar website (https://mizar.uwb.edu.pl). The source code can be compiled with Free Pascal Compiler (https://www.freepascal.org)."
+
+Mizar : 
+
+
+
+Mizar compile with some DEBUG option: compile_debug.sh
+------------------------------------------------------
+
+Mizar sur Raspberry PI 2 
+========================
+Teste sur Raspberry PI 2 model b rev 1.1 (1 Go RAM)
+OS: Raspberry Pi OS (8 Go SDRAM) (https://www.raspberrypi.com/software/)
+avec Mizar 8.1.12 MML 5.72.1435 (http://mizar.uwb.edu.pl/~softadm/pub/system/i386-linux/mizar-8.1.12_5.72.1435-i386-linux.tar)
+
+Attention: les repertoires d'installation sont "usr/local/bin" et non pas "/usr/local/bin"
+
+~/mizar2
+~/mizar2/MizarSystem
+~/mizar2/usr/local/bin
+~/mizar2/usr/local/share/mizar
+~/mizar2/usr/local/doc/mizar
+
+Options
+-------
+[default is /usr/local/bin]
+usr/local/bin
+[default is /usr/local/share/mizar]
+usr/local/share/mizar
+[default is /usr/local/doc/mizar]
+usr/local/doc/mizar
+
+Installation
+============
+$ uname -a
+Linux raspberrypi 5.15.84-v7+ #1613 SMP Thu Jan 5 11:59:48 GMT 2023 armv7l GNU/L
+inux
+
+$ sudo apt install fpc
+[...]
+
+$ fpc
+Free Pascal Compiler version 3.2.0+dfsg-12+rpi1 [2021/02/05] for arm
+Copyright (c) 1993-2020 by Florian Klaempfl and others
+/usr/bin/arm-linux-gnueabihf-fpc-3.2.0 [options] <inputfile> [options]
+[...]
+
+$ mkdir mizar2
+$ cd mizar2
+$ git clone https://github.com/CoghettoR/MizarSystem.git
+$ cd MizarSystem
+$ time sh compile_rpi.sh
+[...]
+real	2m10,611s
+user	1m56,397s
+sys	0m13,367s
+
+$ ls -l ./bin
+total 34492
+-rwxr-xr-x 1 roland roland  733448  3 mar 20:11 absedt
+-rwxr-xr-x 1 roland roland 1059136  3 mar 20:09 accom
+-rwxr-xr-x 1 roland roland  549056  3 mar 20:10 addfmsg
+-rwxr-xr-x 1 roland roland  753160  3 mar 20:10 checkvoc
+-rwxr-xr-x 1 roland roland  545600  3 mar 20:10 chkerr
+-rwxr-xr-x 1 roland roland  747952  3 mar 20:11 chklab
+-rwxr-xr-x 1 roland roland  550000  3 mar 20:10 commextr
+-rwxr-xr-x 1 roland roland 1000616  3 mar 20:11 constr
+-rwxr-xr-x 1 roland roland  685832  3 mar 20:10 createvd
+-rwxr-xr-x 1 roland roland  733264  3 mar 20:10 dellink
+-rwxr-xr-x 1 roland roland  697528  3 mar 20:10 edtfile
+-rwxr-xr-x 1 roland roland  986096  3 mar 20:10 envget
+-rwxr-xr-x 1 roland roland  549728  3 mar 20:10 errflag
+-rwxr-xr-x 1 roland roland 1029088  3 mar 20:10 esmprocessor
+-rwxr-xr-x 1 roland roland 1503664  3 mar 20:09 exporter
+-rwxr-xr-x 1 roland roland  664376  3 mar 20:11 findvoc
+-rwxr-xr-x 1 roland roland  748816  3 mar 20:11 inacc
+-rwxr-xr-x 1 roland roland  688536  3 mar 20:11 irrths
+-rwxr-xr-x 1 roland roland  711312  3 mar 20:11 irrvoc
+-rwxr-xr-x 1 roland roland  764064  3 mar 20:11 lisppars
+-rwxr-xr-x 1 roland roland  662520  3 mar 20:11 listvoc
+-rwxr-xr-x 1 roland roland 1060568  3 mar 20:09 makeenv
+-rwxr-xr-x 1 roland roland  550000  3 mar 20:10 mglue
+-rwxr-xr-x 1 roland roland 1029088  3 mar 20:10 msmprocessor
+-rwxr-xr-x 1 roland roland  678984  3 mar 20:10 msplit
+-rwxr-xr-x 1 roland roland 1059144  3 mar 20:10 naccom
+-rwxr-xr-x 1 roland roland  546192  3 mar 20:10 prune
+-rwxr-xr-x 1 roland roland  779472  3 mar 20:10 refrem
+-rwxr-xr-x 1 roland roland 1688144  3 mar 20:10 relinfer
+-rwxr-xr-x 1 roland roland 1684320  3 mar 20:10 reliters
+-rwxr-xr-x 1 roland roland 1684592  3 mar 20:11 relprem
+-rwxr-xr-x 1 roland roland  545200  3 mar 20:10 remflags
+-rwxr-xr-x 1 roland roland  757824  3 mar 20:10 renthlab
+-rwxr-xr-x 1 roland roland  771664  3 mar 20:10 replthls
+-rwxr-xr-x 1 roland roland 1003000  3 mar 20:10 transfer
+-rwxr-xr-x 1 roland roland 1683880  3 mar 20:11 trivdemo
+-rwxr-xr-x 1 roland roland  679688  3 mar 20:11 unhereby
+-rwxr-xr-x 1 roland roland 1682688  3 mar 20:09 verifier
+-rwxr-xr-x 1 roland roland  944720  3 mar 20:10 wsmparser
+
+$ file ./bin/*
+./bin/absedt:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/accom:        ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/addfmsg:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/checkvoc:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/chkerr:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/chklab:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/commextr:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/constr:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/createvd:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/dellink:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/edtfile:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/envget:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/errflag:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/esmprocessor: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/exporter:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/findvoc:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/inacc:        ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/irrths:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/irrvoc:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/lisppars:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/listvoc:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/makeenv:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/mglue:        ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/msmprocessor: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/msplit:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/naccom:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/prune:        ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/refrem:       ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/relinfer:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/reliters:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/relprem:      ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/remflags:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/renthlab:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/replthls:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/transfer:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/trivdemo:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/unhereby:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/verifier:     ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+./bin/wsmparser:    ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, for GNU/Linux 2.0.0, stripped
+$ 
+
+$ cd ..
+$ mkdir -p usr/local/bin
+$ mkdir -p usr/local/share/mizar
+$ mkdir -p usr/local/doc/mizar
+$ wget http://mizar.uwb.edu.pl/~softadm/pub/system/i386-linux/mizar-8.1.12_5.72.1435-i386-linux.tar
+$ tar xvf mizar-8.1.12_5.72.1435-i386-linux.tar
+README
+install.sh
+mizbin.tar.gz
+mizdoc.tar.gz
+mizshare.tar.gz
+
+$ sh install.sh
+ 
+Installation of Mizar System Version 8.1.12 (Linux/FPC) (MML 5.72.1435)
+ 
+Enter the path for installing Mizar executables
+[default is /usr/local/bin]
+usr/local/bin
+Unpacking to usr/local/bin
+ 
+Enter the path for installing Mizar shared files
+[default is /usr/local/share/mizar]
+usr/local/share/mizar
+Unpacking to usr/local/share/mizar
+ 
+It may take some time...
+ 
+Enter the path for installing Mizar documentation
+[default is /usr/local/doc/mizar]
+usr/local/doc/mizar
+Unpacking to usr/local/doc/mizar
+ 
+The installation process of the Mizar system is completed.
+ 
+Note:
+The Mizar system requires a variable MIZFILES
+which should be set to usr/local/share/mizar.
+ 
+If usr/local/bin is not in your PATH please add it before running Mizar.
+ 
+With questions or comments contact mus@mizar.uwb.edu.pl
+
+$ 
+$ cd usr
+$ du
+55424	./local/bin
+2384	./local/doc/mizar/xml
+5708	./local/doc/mizar
+5712	./local/doc
+161676	./local/share/mizar/mml
+24756	./local/share/mizar/abstr
+11616	./local/share/mizar/prel/a
+13288	./local/share/mizar/prel/c
+16440	./local/share/mizar/prel/m
+7424	./local/share/mizar/prel/t
+7468	./local/share/mizar/prel/l
+5152	./local/share/mizar/prel/i
+3128	./local/share/mizar/prel/o
+6488	./local/share/mizar/prel/b
+10184	./local/share/mizar/prel/r
+512	./local/share/mizar/prel/k
+964	./local/share/mizar/prel/u
+1460	./local/share/mizar/prel/q
+11088	./local/share/mizar/prel/s
+4964	./local/share/mizar/prel/j
+3536	./local/share/mizar/prel/e
+7848	./local/share/mizar/prel/n
+4364	./local/share/mizar/prel/w
+4220	./local/share/mizar/prel/x
+3316	./local/share/mizar/prel/d
+11240	./local/share/mizar/prel/p
+2264	./local/share/mizar/prel/y
+3148	./local/share/mizar/prel/h
+14736	./local/share/mizar/prel/f
+3804	./local/share/mizar/prel/z
+13420	./local/share/mizar/prel/g
+2972	./local/share/mizar/prel/v
+175048	./local/share/mizar/prel
+362280	./local/share/mizar
+362284	./local/share
+423424	./local
+423428	.
+$ export MIZFILES=$HOME/mizar2/usr/local/share/mizar
+$ export PATH="$HOME/mizar2/usr/local/bin":$PATH
+
+$ cd ../MizarSystem
+$ cp ./bin/* ../usr/local/bin
+
+$ cd ..
+$ mkdir -p test
+$ cd test
+$ cat << EOF >> test.miz
+> environ
+> begin
+> EOF
+$ mizf test.miz
+Make Environment, Mizar Ver. 8.1.12/rpi (Linux/FPC)
+Copyright (c) 1990-2023 Association of Mizar Users
+
+-Vocabularies  [   1]
+-Constructors  [   1]
+-Requirements  [   1]
+-Registrations [   1]
+-Notations     [   1]
+
+Verifier based on More Strict Mizar Processor, Mizar Ver. 8.1.12/rpi (Linux/FPC)
+Copyright (c) 1990-2023 Association of Mizar Users
+Processing: ./test.miz
+
+Parser   [   2]   0:00
+MSM      [   2]   0:00
+Analyzer   0:00
+Checker  [   1]
+Time of mizaring: 0:00
+
+$ cd ..
+# POUR RECONSTRUIRE toute la MML:
+$ mkdir mml
+$ cd mml
+$ cp ../MizarSystem/Makefile .
+$ cp ../usr/local/share/mizar/mml/* .
+$ make
+
+
+
+
